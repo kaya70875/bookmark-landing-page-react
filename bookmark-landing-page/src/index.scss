@@ -4,6 +4,7 @@
     margin: 0;
 
     font-family: 'Rubik', sans-serif;
+    font-size : 18px;
 }
 
 :root {
@@ -15,3 +16,35 @@
     --fontWeightStandart : 400;
     --fontWeightNormal : 500;
 }
+
+.container {
+    max-width: 1536px;
+    margin: 0 auto;
+    padding: 0.5rem;
+  
+    @media (max-width: 1536px) {
+      max-width: 1280px;
+    }
+    
+    @media (max-width: 1280px) {
+      max-width: 1024px;
+    }
+    
+    @media (max-width: 1024px) {
+      max-width: 768px;
+    }
+  
+    @media (max-width: 768px) {
+      max-width: 640px;
+    }
+  
+    @media (max-width: 640px) {
+      max-width: 475px;
+    }
+    
+    @media (max-width: 475px) {
+      width: 100%;
+    }
+  }
+  
+    
