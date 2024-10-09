@@ -1,0 +1,45 @@
+h1 {
+    color : var(--very-dark-blue);
+    font-weight: var(--fontWeightNormal);
+    font-size: 2.5rem;
+}
+
+p {
+    color : var(--grayishBlue);
+    font-weight: var(--fontWeightStandart);
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+}
+
+//Buttons
+
+.primary {
+    background-color: var(--softBlue);
+    color : white;
+    border-radius: 5px;
+    padding: 1em 1.5em;
+    border: none;
+    cursor: pointer;
+}
+
+.secondary {
+    background-color: white;
+    color : var(--very-dark-blue);
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+//bg
+
+.bg {
+    background-color: var(--softBlue);
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    right : -40%;
+    bottom : 0;
+    z-index: -1000;
+    border-bottom-left-radius: 120px;
+}
