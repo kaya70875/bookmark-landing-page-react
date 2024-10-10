@@ -82,3 +82,9 @@
     width: 100%;
     align-items: start;
 }
+
+@media (max-width : 1280px) {
+    .article-hero-section {
+        gap : 8rem;
+    }
+}

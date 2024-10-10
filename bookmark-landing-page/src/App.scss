@@ -88,4 +88,14 @@ ul {
     background-color: var(--grayishBlue);
     margin: .75em 0;
 }
-  
+
+
+@media (max-width : 1280px) {
+    .bg {
+        height: 300px;
+
+        &--reverse {
+            width: 100%;
+        }
+    }
+}
