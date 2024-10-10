@@ -52,7 +52,7 @@ export default function Faq() {
                     </li>
                 ))}
             </ul>
-            <div className="button-wrapper">
+            <div className="faq-button-wrapper">
                 <button className="primary">More Info</button>
             </div>
         </section>
