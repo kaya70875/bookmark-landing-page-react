@@ -99,3 +99,32 @@ ul {
         }
     }
 }
+
+@media (max-width : 1024px) {
+    .bg {
+        height: 200px;
+        bottom : 10%;
+
+        &--reverse {
+            bottom : 0;
+            width: 120%;
+            left: -50%;
+        }
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: .9rem;
+    }
+
+    .primary {
+        font-size: .8rem;
+    }
+}
