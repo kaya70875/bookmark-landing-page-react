@@ -1,0 +1,52 @@
+.faq {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap : 4rem;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap : 2rem;
+    width: 70%;
+    align-items: center;
+    justify-content: start;
+}
+
+.faq-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 640px;
+
+    .faq-question {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .faq-card {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .faq-answer {
+    display: none;
+      margin-top: 0.5rem;
+    }
+
+    &.active .faq-answer {
+        display: block;
+    }}
+
+.button-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
