@@ -42,6 +42,7 @@ export default function Article() {
               onClick={() => setActiveIndex(index)}
             >
               <a>{card.title}</a>
+              <div className="line" data-line='article'></div>
             </li>
           ))}
         </ul>
