@@ -48,3 +48,24 @@
         width: 90%;
     }
 }
+
+@media (max-width : 768px) {
+    .hero {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero__img {
+        justify-content: center;
+    }
+
+    .hero__main {
+        align-items: center;
+    }
+
+    .hero__header {
+        align-items: center;
+        text-align: center;
+    }
+}
