@@ -25,3 +25,9 @@
     gap : 1rem;
     align-items: center;
 }
+
+@media (max-width : 768px) {
+    .browsers-section {
+        flex-direction: column;
+    }
+}
