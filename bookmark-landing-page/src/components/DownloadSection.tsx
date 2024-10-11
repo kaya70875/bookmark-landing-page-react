@@ -2,6 +2,7 @@ import './_DownloadSection.scss';
 import chromeImg from '../assets/logo-chrome.svg';
 import firefoxImg from '../assets/logo-firefox.svg';
 import operaImg from '../assets/logo-opera.svg';
+import { motion } from 'framer-motion';
 
 export default function DownloadSection() {
 
@@ -33,7 +34,11 @@ export default function DownloadSection() {
                 <p>We’ve got more browsers in the pipeline. Please do let us know if you’ve got a favourite you’d like us to prioritize.</p>
             </header>
 
-            <div className="browsers-section">
+            <motion.div className="browsers-section"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false }}>
                 {browsersCard.map(browser => (
                     <div className="browser-card" style={{ marginTop: browser.margin }}>
                         <div className="browser-img">
@@ -47,7 +52,7 @@ export default function DownloadSection() {
                     </div>
                 ))}
 
-            </div>
+            </motion.div>
         </section>
     )
 }

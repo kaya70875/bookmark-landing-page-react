@@ -4,6 +4,7 @@ import articleImg from '../assets/illustration-features-tab-1.svg';
 import intelligentImg from '../assets/illustration-features-tab-2.svg';
 import sharingImg from '../assets/illustration-features-tab-3.svg';
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Article() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -33,7 +34,11 @@ export default function Article() {
         <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
       </header>
 
-      <section className="features-section">
+      <motion.section className="features-section"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: false }}>
         <ul className="options__section">
           {cards.map((card, index) => (
             <li
@@ -49,17 +54,26 @@ export default function Article() {
 
         <div className="article-hero-section">
           <HeroImg currentImg={cards[activeIndex].img} isReverse={true} />
-          <div className="article-hero">
-            <header className="article-hero-header">
-              <h2>{cards[activeIndex].title}</h2>
-              <p>{cards[activeIndex].description}</p>
-            </header>
-            <div className="button-wrapper">
-              <button className="primary">More Info</button>
-            </div>
-          </div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeIndex}
+              className="article-hero"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <header className="article-hero-header">
+                <h2>{cards[activeIndex].title}</h2>
+                <p>{cards[activeIndex].description}</p>
+              </header>
+              <div className="button-wrapper">
+                <button className="primary">More Info</button>
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
-      </section>
+      </motion.section>
     </article>
   );
 }

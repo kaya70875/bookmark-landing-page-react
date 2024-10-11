@@ -1,11 +1,16 @@
 import './_Footer.scss'
 import facebook from '../assets/icon-facebook.svg'
 import twitter from '../assets/icon-twitter.svg'
+import {motion} from 'framer-motion'
 
 export default function Footer() {
     return (
         <footer className="footer">
-            <section className="footer-up">
+            <motion.section className="footer-up"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false }}>
                 <header className="footer-header">
                     <h3>35.000+ Already Joined</h3>
                     <h2>Stay up to-date with what we're doing</h2>
@@ -16,7 +21,7 @@ export default function Footer() {
                     <button className="nav-button" data-role="footer-button">Contact Us</button>
                 </div>
 
-            </section>
+            </motion.section>
             <section className="footer-down">
                 <div className="footer-wrapper container">
                     <div className="footer-logo-side">

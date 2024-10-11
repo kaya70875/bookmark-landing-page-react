@@ -1,9 +1,14 @@
 import './_Hero.scss'
 import heroImg from '../assets/illustration-hero.svg';
+import {motion} from 'framer-motion';
 
 export default function Hero() {
   return (
-    <main className="hero container">
+    <motion.main className="hero container"
+    initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: false }}>
       <div className="hero__main">
         <header className="hero__header">
           <h1>A Simple Bookmark Manager</h1>
@@ -19,6 +24,6 @@ export default function Hero() {
 
           <div className="bg"></div>
         </div>
-    </main>
+    </motion.main>
   )
 }
