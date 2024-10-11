@@ -140,3 +140,31 @@ ul {
         }
     }
 }
+
+/* Decrease Font Size For Mobile */
+
+@media (max-width : 475px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: .8rem;
+    }
+
+    a {
+        font-size: .8rem;
+    }
+
+    .primary , .secondary{
+        font-size: 3.5vmin; // this is an excellent way to make the font size responsive
+    }
+}
