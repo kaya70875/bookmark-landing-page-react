@@ -92,7 +92,7 @@ ul {
 
 @media (max-width : 1280px) {
     .bg {
-        height: 300px;
+        height: 80%;
 
         &--reverse {
             width: 100%;
@@ -102,7 +102,7 @@ ul {
 
 @media (max-width : 1024px) {
     .bg {
-        height: 200px;
+        height: 70%;
         bottom : 10%;
 
         &--reverse {
@@ -126,5 +126,17 @@ ul {
 
     .primary {
         font-size: .8rem;
+    }
+}
+
+@media (max-width : 768px) {
+    .bg {
+        height: 70%;
+        bottom : 5%;
+
+        &--reverse {
+            height: 85%;
+            bottom : -20%;
+        }
     }
 }
