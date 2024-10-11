@@ -41,7 +41,7 @@ export default function Article() {
               className={`options-item ${index === activeIndex ? 'active' : ''}`}
               onClick={() => setActiveIndex(index)}
             >
-              <a>{card.title}</a>
+              <a className={`${index === activeIndex ? 'active' : ''}`}>{card.title}</a>
               <div className="line" data-line='article'></div>
             </li>
           ))}

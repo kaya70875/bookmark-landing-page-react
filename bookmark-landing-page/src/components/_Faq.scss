@@ -27,12 +27,26 @@
       background: none;
       border: none;
       cursor: pointer;
+
+      &.active {
+        color : var(--softRed);
+      }
     }
 
     .faq-card {
         display: flex;
         width: 100%;
         justify-content: space-between;
+
+        &.active {
+            .faq-question {
+                color : var(--softRed);
+
+                img {
+                    color : var(--softRed);
+                }
+            }
+        }
     }
 
     .faq-answer {

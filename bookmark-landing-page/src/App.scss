@@ -33,6 +33,10 @@ a {
         color : var(--very-dark-blue);
         font-weight: var(--fontWeightNormal);
     }
+
+    &:hover {
+        color : var(--softRed);
+    }
 }
 
 ul {
@@ -48,15 +52,36 @@ ul {
     padding: 1em 1.5em;
     border: none;
     cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        background: transparent;
+        border: 2px solid var(--softBlue);
+        color : var(--softBlue);
+    }
 }
 
 .secondary {
-    background-color: white;
+    background-color: rgb(238, 238, 238);
     color : var(--very-dark-blue);
     border-radius: 5px;
     padding: 0.5rem 1.5rem;
     border: none;
     cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        background: transparent;
+        border: 2px solid var(--very-dark-blue);
+        color : var(--very-dark-blue);
+    }
 }
 
 //bg

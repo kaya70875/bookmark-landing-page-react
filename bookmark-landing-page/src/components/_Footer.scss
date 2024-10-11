@@ -75,6 +75,21 @@
     align-items: center;
     justify-content: center;
     gap : 2rem;
+
+    img {
+        cursor: pointer;
+        &:hover {
+            filter: invert(49%) sepia(85%) saturate(2476%) hue-rotate(325deg) brightness(101%) contrast(96%);
+        }
+    }
+}
+
+.nav-button[data-role="footer-button"] {
+    &:active {
+        background: white;
+        border: 2px solid var(--softRed);
+        color : var(--softRed);
+    }
 }
 
 .footer-item {
@@ -84,6 +99,10 @@
         font-weight: 400;
         font-size: .8rem;
         letter-spacing: .1rem;
+
+        &:hover {
+            color : var(--softRed);
+        }
     }
 }
 

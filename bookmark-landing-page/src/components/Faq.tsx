@@ -40,9 +40,14 @@ export default function Faq() {
                 {faqs.map((faq, index) => (
                     <li key={index} className={`faq-item ${activeIndex === index ? 'active' : ''}`}>
                         <div className="line"></div>
-                        <div className="faq-card">
+                        <div className="faq-card" onClick={(e) => {
+                            toggleFAQ(index);
+                            e.currentTarget.classList.toggle('active');
+                        }}>
                             <h3 className="faq-question">{faq.question}</h3>
-                            <button className="faq-question" onClick={() => toggleFAQ(index)}>
+                            <button className="faq-question" onClick={() => {
+                                toggleFAQ(index);
+                            }}>
                                 <img src={activeIndex === index ? chevronClose : chevronIcon} alt="chevron icon" />
                             </button>
                         </div>

@@ -13,7 +13,7 @@ export default function Footer() {
 
                 <div className="contact-wrapper">
                     <input type="text" placeholder="Enter your email address" />
-                    <button className="nav-button">Contact Us</button>
+                    <button className="nav-button" data-role="footer-button">Contact Us</button>
                 </div>
 
             </section>

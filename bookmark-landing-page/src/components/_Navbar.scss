@@ -24,6 +24,10 @@
         text-decoration: none;
         color : var(--very-dark-blue);
         text-transform: uppercase;
+
+        &:hover {
+            color : var(--softRed);
+        }
     }
 }
 
@@ -34,6 +38,7 @@
     border: none;
     background-color: var(--softRed);
     color : white;
+    cursor: pointer;
 
     &--mobile {
         color : white;
@@ -41,6 +46,16 @@
         padding: 1em 1.5em;
         background: none;
         border : 2px solid white;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    &:active {
+        background: transparent;
+        color : var(--softRed);
+        border : 2px solid var(--softRed);
     }
 }
 
