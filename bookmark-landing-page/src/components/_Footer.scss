@@ -86,3 +86,35 @@
         letter-spacing: .1rem;
     }
 }
+
+@media (max-width : 768px) {
+    .footer-header {
+        gap : 2rem;
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
+    }
+    
+    .footer-list {
+        flex-direction: column;
+        gap : 2rem;
+    }
+
+    .footer-logo-side {
+        flex-direction: column;
+        gap : 2rem;
+    }
+
+    .footer-socials-side {
+        margin-top: 2em;
+    }
+}
