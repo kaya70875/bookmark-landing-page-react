@@ -4,11 +4,41 @@ h1 {
   font-size: 2.5rem;
 }
 
+h2 {
+  color: var(--very-dark-blue);
+  font-weight: var(--fontWeightNormal);
+  font-size: 2rem;
+}
+
+h3 {
+  color: var(--very-dark-blue);
+  font-weight: var(--fontWeightStandart);
+  font-size: 1.2rem;
+}
+
 p {
   color: var(--grayishBlue);
   font-weight: var(--fontWeightStandart);
   font-size: 1.125rem;
   line-height: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--grayishBlue);
+  font-weight: 400;
+  transition: color 0.5s ease;
+}
+a.active {
+  color: var(--very-dark-blue);
+  font-weight: var(--fontWeightNormal);
+}
+a:hover {
+  color: var(--softRed);
+}
+
+ul {
+  list-style: none;
 }
 
 .primary {
@@ -19,14 +49,31 @@ p {
   border: none;
   cursor: pointer;
 }
+.primary:hover {
+  opacity: 0.8;
+}
+.primary:active {
+  background: transparent;
+  border: 2px solid var(--softBlue);
+  color: var(--softBlue);
+}
 
 .secondary {
-  background-color: white;
+  background-color: rgb(238, 238, 238);
   color: var(--very-dark-blue);
   border-radius: 5px;
   padding: 0.5rem 1.5rem;
   border: none;
   cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.secondary:hover {
+  opacity: 0.8;
+}
+.secondary:active {
+  background: transparent;
+  border: 2px solid var(--very-dark-blue);
+  color: var(--very-dark-blue);
 }
 
 .bg {
@@ -38,4 +85,82 @@ p {
   bottom: 0;
   z-index: -1000;
   border-bottom-left-radius: 120px;
+}
+.bg--reverse {
+  left: -40%;
+  bottom: -30%;
+  width: 120%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 120px;
+}
+
+/*Extra */
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: var(--grayishBlue);
+  margin: 0.75em 0;
+}
+
+@media (max-width: 1280px) {
+  .bg {
+    height: 80%;
+  }
+  .bg--reverse {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .bg {
+    height: 70%;
+    bottom: 10%;
+  }
+  .bg--reverse {
+    bottom: 0;
+    width: 120%;
+    left: -50%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  .primary {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  .bg {
+    height: 70%;
+    bottom: 5%;
+  }
+  .bg--reverse {
+    height: 85%;
+    bottom: -20%;
+  }
+}
+/* Decrease Font Size For Mobile */
+@media (max-width: 475px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+  a {
+    font-size: 0.8rem;
+  }
+  .primary, .secondary {
+    font-size: 3.5vmin;
+  }
 }/*# sourceMappingURL=App.css.map */
